@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Day 1",
+      "setup": "",
+      "run": "gradle test --tests 'client.*'",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Day 2",
+      "setup": "",
+      "run": "gradle test --tests 'bag.ArrayBagTest'",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Day 3",
+      "setup": "",
+      "run": "gradle test --tests 'bag.LinkedBagTest'",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}

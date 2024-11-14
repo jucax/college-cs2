@@ -1,0 +1,10 @@
+This is an example text file.
+
+It has lots of text.
+It is used to test exercise 18.
+
+Here is some random math: 4 + 5 = 9
+
+!!!!!!!!!!!!!!!!!!!
+
+END

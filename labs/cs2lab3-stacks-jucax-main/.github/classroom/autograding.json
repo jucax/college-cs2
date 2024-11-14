@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Day 1",
+      "setup": "",
+      "run": "gradle test --tests 'client.*'",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Day 2",
+      "setup": "rm src/test/java/stack/LinkedStackTest.java; rm src/test/java/stack/ArrayStackTest.java ; unzip -P GE3sa430z .test/.LS.zip -d src/test/java/stack ; unzip -P GE3sa430z .test/.AS.zip -d src/test/java/stack ",
+      "run": "gradle test --tests 'stack.*'",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
