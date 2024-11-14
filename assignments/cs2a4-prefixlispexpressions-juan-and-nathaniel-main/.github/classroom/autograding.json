@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Stack",
+      "setup": "unzip -P GE3sa430z .test/.LS.zip -d src/test/java/stack ; rm src/test/java/lisp/LispEvaluateTest.java ; rm src/test/java/stack/LinkedStackTest.java",
+      "run": "gradle clean test",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "LispEvaluate",
+      "setup": "unzip -P GE3sa430z .test/.LE.zip -d src/test/java/lisp ; rm src/test/java/lisp/LispEvaluateTest.java ; rm src/test/java/stack/LinkedStackTest.java",
+      "run": "gradle clean test",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 35
+    }
+  ]
+}

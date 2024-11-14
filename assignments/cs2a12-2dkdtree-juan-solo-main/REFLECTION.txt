@@ -1,0 +1,24 @@
+1. (4 points) Why can't this class directly implement the SearchTreeInterface<T>? Specifically, what restriction on type T makes it impossible for TwoDimensionTree<T> to implement SearchTreeInterface<T>?
+The TwoDimensionTree<T> class cannot directly implement the SearchTreeInterface<T> because the primary operations
+of TwoDimensionTree<T> are based on 2D point spatial coordinates (getX() and getY()). The SearchTreeInterface<T> 
+normally requires the elements T to support comparison operations like compareTo() or equals() to maintain sorting
+properties, something that is not inherently provided by the Located2D interface alone, instead, to know if one 
+object is equal to the other, the coordinates are compared directly and in some cases the label. Therefore, due 
+to this mismatch in required functionality, direct implementation of SearchTreeInterface<T> by TwoDimensionTree<T> 
+is impossible.
+
+2. (3 points) In what SPECIFIC ways does THIS assignment help you move from a novice to an expert designer? How has THIS assignment built upon what was taught in the book and in class?
+This assignment has been the most challenging of the semester, but it has also been incredibly rewarding in helping 
+me consolidate and apply all the knowledge I have gained. I have gained a deep understanding of how inheritance 
+works by implementing complex tree structures such as TwoDimensionTree<T>. Working with the Point library has enhanced 
+my understanding of 2D spatial concepts, and I have explored various applications of trees in real-world scenarios. 
+In addition, this work has significantly improved my ability to create thorough and efficient tests, allowing me to 
+ensure the correctness and robustness of my implementations. 
+
+3. (3 points) In what ways is design an innate talent held by few or a skill that can be learned by many? Answer the above question with respect to THIS SPECIFIC assignment. How does this assignment make you feel about the relationship between talent and skill?
+Design, demonstrated through the implementation of TwoDimensionTree<T>, is predominantly a skill that can be learned 
+by many rather than an innate talent. This assignment has put demonstrated the importance of acquired knowledge and 
+effort when tackling complex programming tasks such as these. The challenges faced and skills developed show that 
+success in software design is primarily the result of dedication and continuous learning, rather than relying solely 
+on innate skills. It reinforces the relationship between effort and skill development in mastering programming concepts.
+

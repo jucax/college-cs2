@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Selection, Insertion, Merge, Quick",
+      "setup": "",
+      "run": "gradle clean test",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 80
+    }
+  ]
+}

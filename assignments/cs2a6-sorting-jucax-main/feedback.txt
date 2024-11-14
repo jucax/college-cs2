@@ -1,0 +1,9 @@
+Total: 98/100
+
+20/20%: Sorting.java: Functionality of selection sort
+20/20%: Sorting.java: Functionality of insertion sort
+20/20%: Sorting.java: Functionality of merge sort
+20/20%: Sorting.java: Functionality of quick sort
+18/20%: Sorting.java: Comments and style across all code
+	-1: quicksort comment claims it uses mergesort
+	-1: partition method does not mention its @return

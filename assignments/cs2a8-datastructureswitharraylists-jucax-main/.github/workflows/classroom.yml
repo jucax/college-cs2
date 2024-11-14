@@ -1,0 +1,54 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Stack
+      id: stack
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Stack
+        setup-command: rm -R src/test/java/stack ; unzip -P GE3sa430z .test/.ST.zip
+          -d src/test/java/stack
+        command: gradle test --tests 'stack.*'
+        timeout: 10
+        max-score: 10
+    - name: Deque
+      id: deque
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Deque
+        setup-command: rm -R src/test/java/deque ; unzip -P GE3sa430z .test/.DQ.zip
+          -d src/test/java/deque
+        command: gradle test --tests 'deque.*'
+        timeout: 10
+        max-score: 16
+    - name: Set
+      id: set
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Set
+        setup-command: rm -R src/test/java/set ; unzip -P GE3sa430z .test/.SE.zip
+          -d src/test/java/set
+        command: gradle test --tests 'set.*'
+        timeout: 10
+        max-score: 16
+    - name: Autograding Reporter
+      uses: education/autograding-grading-reporter@v1
+      env:
+        STACK_RESULTS: "${{steps.stack.outputs.result}}"
+        DEQUE_RESULTS: "${{steps.deque.outputs.result}}"
+        SET_RESULTS: "${{steps.set.outputs.result}}"
+      with:
+        runners: stack,deque,set

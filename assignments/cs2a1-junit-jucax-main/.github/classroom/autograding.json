@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "SimpleStaticMethods",
+      "setup": "unzip -o -P 932HeQ748 .test/.SSM.zip -d src/test/java ; rm src/test/java/ScannerMethodsTest.java",
+      "run": "gradle test",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 24
+    },
+    {
+      "name": "ScannerMethods",
+      "setup": "unzip -o -P A381ab7q92 .test/.Scan.zip -d src/test/java ; rm src/test/java/SimpleStaticMethodsTest.java",
+      "run": "gradle test",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 24
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+1. (2 points) List some pros/cons of a link-based stack in comparison with an array-based stack.
+Linked-based
+    Pros:
+        - The implementation can dynamically increase or decrease the size of the stack, so we don't have to stablish a default or max size.
+        - We can remove elements or clear all the stack more easily than in the array-based due to the garbage collection.
+    Cons:
+        - Possible memory overhead due to the quantity of nodes if we are working with huge number of elements.
+        - Less efficient with cache, large scale can lead to slower access times due to cache misses.
+Array-based
+    Pros:
+        - Less posible memory overhead, because it just store data elements withous additional references to other elements.
+        - More efficient with cache that reduces cache misses and improve access times.
+    Cons:
+        - There is a fixed size limitation, and it needs a resize method when the array is full than decreases efficiency.
+        - It waste memory if the array size is overstimated and the array has bigger capacity than the elements in it.
+
+2. (3 points) Communication is a very important skill for Computer Scientists to have. Give a brief but clear description in words explaining how you handled expressions involving subtraction (-) and division (/) applied to multiple operands. DO NOT simply describe what the text of your code looks like.
+We first tried the same solution as for the "+" and "*" operations, where we simply perform the operation in the order in 
+which the operands are obtained from the stack, but this did not work for "-" and "/" because the order of the operands 
+matters in these operations. We noticed that for these cases we needed to reverse the order of the operands to which this 
+operation should be applied, and the best option we considered was to create a new support stack that would serve to pass 
+the necessary operands from the main stack to this one by reversing the order and then perform the operation as we did with 
+"+" and "*" but with the numbers of the temporary stack until it was empty and ready for the next operation that needs it.
+
+3. (2 points) In what SPECIFIC ways does THIS assignment help you move from a novice to an expert designer? How has THIS assignment built upon what was taught in the book and in class?
+Nathaniel: This assignment helped me move from a novice to an expert designer by giving me key information on how to appropriately 
+implement stack methods with the goal of completing a specific task. I was already familiar with how to implement stack methods, 
+but using them to actually achieve something is super valuable knowledge that advanced my design level.
+
+Juan: Thanks to this task, I feel more confident in my ability to identify and evaluate prefix and postfix operations, and to convert 
+from one to the other with a simple and efficient algorithm. Now I can understand 100% how to design and implement the structure of 
+stacks to solve other types of problems of greater difficulty, also I learned the functionality of this new Lisp language and reinforced 
+my skills to divide the problems in helper methods that besides being functional, are documented and ready to be reused later if necessary.
+
+4. (3 points) In what ways is design an innate talent held by few or a skill that can be learned by many? Answer the above question with respect to THIS SPECIFIC assignment. How does this assignment make you feel about the relationship between talent and skill?
+Nathaniel: In this assignment, design being an innate talent would be evident if the person was easily able to tell what to do 
+in the different switch cases. Computer Science takes a particular intuition, and some people are naturally gifted with the 
+intuition and can tell without much diligence what will and will not work. For others, this has to be learned. We used a lot of 
+trial and error to make sure the code worked, and the switch statements in particular were tricky, but once we got in the grove 
+and understood the pattern a bit better, it became easier.
+
+Juan: In this assignment I was able to identify innate talent and learned skills in a variety of ways, first of all innate ability 
+and creativity allow us to develop creative and efficient solutions to large problems by breaking them down into smaller problems, 
+for example identifying that to evaluate Lisp expressions, we first had to add spaces, then convert to postfix and finally evaluate. 
+However, although the idea was very good, it is the learned skills such as the correct use of switch cases, stack implementations and 
+the use of the NaN element that allow us to bring our solution to reality.
+In conclusion in this project I realized that innate talent is a good starting point to design a solution, but it is the knowledge 
+that you acquire that allows you to do things and improve as a programmer in general.

@@ -1,0 +1,29 @@
+1. (3 points) How do these three approaches compare in terms of difficulty to write?
+The Three Quadrant Search method was quite easy to understand with the help of the example images, and to write 
+it was also easy, the complicated part is to make the recursive calls correctly so that the quadrants are divided 
+as they should be and do not include columns or rows in which it is not necessary to search. The Zig-zag Search 
+method was the simplest of all since it does not include recursion and is only iterative, the complicated part 
+is the loop condition, and identifying that the loop must end if the value is found, if the number of rows is 
+exceeded and if the number of available columns is exceeded, finally the third method Binary Search on Diagonal 
+Plus Two Sub-rectangles, was the most difficult to do, because it includes more than one helper method, the 
+recursive calls were not so difficult, but the problem was to work with the cases in which the rectangles did not 
+have the same height and width, so finding the diagonal is a little more difficult. 
+
+2. (3 points) How do you think these algorithms compare in terms of efficiency, and why? You do not need to know the big-Oh times for certain, but explain why you think each algorithm is faster or slower than another.
+What is most interesting is the number of quadrants that can be discarded with each of the methods, in the Three 
+Quadrant Search method, as its name says, we can only discard one quadrant for each call we make, so it occurs 
+to me that we could represent it approximately as O(3(n/4)). The Zig-zag Search method I would say is the slowest, 
+because we are discarding only one cell for each cycle, and we may go through the whole array from corner to 
+corner without finding the number which sounds quite inefficient.
+Finally the Binary Search on Diagonal Plus Two Sub-rectangles method seems the most efficient, because it discards
+2 quadrants each cycle, and it could be represented as O(2(n/4)) which makes it the fastest, using this logic I 
+found.
+
+3. (4 points) In what ways is design an innate talent held by few or a skill that can be learned by many? Answer the above question with respect to THIS SPECIFIC assignment. How does this assignment make you feel about the relationship between talent and skill?
+In the context of this assignment, designing algorithms and implementing them effectively in code can be considered a 
+blend of innate talent and learned skill. While innate talent may be the ability to design and understand methods 
+to solve problems and the intuition to recognize patterns, most of the skills needed to implement those methods 
+and complete this assignment must be acquired through practice and study. Understanding fundamental concepts like 2D 
+arrays and recursive calls, mastering programming language syntax, and learn software development methodologies 
+are skills that can be cultivated over time. So in this task we can see that while innate talent may offer certain 
+advantages, dedication and continuous learning are essential to achieve this type of algorithm implementation.

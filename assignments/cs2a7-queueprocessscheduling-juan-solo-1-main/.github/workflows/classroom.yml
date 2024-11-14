@@ -1,0 +1,33 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: TEST WILL FAIL
+      id: test-will-fail
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: TEST WILL FAIL
+        setup-command: rm src/test/java/scheduler/SchedulerTest.java; unzip -P GE3sa430z
+          .test/.S.zip -d src/test/java/scheduler ; rm src/test/java/scheduler/SchedulerTest.java
+          ; rm src/test/java/scheduler/AiBSchedulerTest.java ;
+        command: gradle clean test
+        timeout: 10
+        max-score: 35
+    - name: Autograding Reporter
+      uses: education/autograding-grading-reporter@v1
+      env:
+        TEST-WILL-FAIL_RESULTS: "${{steps.test-will-fail.outputs.result}}"
+      with:
+        runners: test-will-fail

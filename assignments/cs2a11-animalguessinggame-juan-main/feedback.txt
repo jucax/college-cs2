@@ -1,0 +1,10 @@
+Total: 98/100
+
+8/10%: REFLECTION.txt: Thoughtful answers to each question.
+	-2: Q2 needs more details
+25/25%: DecisionTree.java: Basic methods (from DecisionTreeInterface).
+20/20%: DecisionTree.java: Ability to save and load decision trees.
+10/10%: DecisionTree.java: Comments, style, and efficiency of implemented methods
+10/10%: GuessingGame.java: Correct implementation of the learn method.
+5/5%: GuessingGame.java: Thorough comments on the learn method.
+20/20%: GuessingGameTest.java: Correctness/thoroughness of additional unit tests.

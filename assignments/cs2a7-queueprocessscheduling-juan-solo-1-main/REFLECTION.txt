@@ -1,0 +1,26 @@
+1. (4 points) Communication is a very important skill for Computer Scientists to have. Give a brief but clear description in words explaining how you make sure processes get placed on the ready queue in the right order, even if a new process wants to come off the start queue right before an incomplete process comes off the processor and back onto the ready queue. DO NOT simply describe what the text of your code looks like.
+The first thing we must do is to add all the processes that have a start time of zero, necessarily there will 
+always be one and we know that the simulationTime variable always starts at zero so in the first while loop we 
+compare the elements of the startQueue <= simulationTime. We execute the process for the timeout or the timeRemaining 
+of the process, whichever is less, we adjust the simulationTime and verify, if the process is incomplete then 
+we declare a new process with the same parameters and first of all, we make the advance from the startQueue 
+to the readyQueue in a normal way with another while loop equal to the one that was made at the beginning, 
+once the next cycle of processes have been added, now we can also add our incomplete process and we can be sure 
+that we are not modifying the order of priorities.
+
+2. (3 points) In what SPECIFIC ways does THIS assignment help you move from a novice to an expert designer? How has THIS assignment built upon what was taught in the book and in class?
+Well, it helped me to apply and fully understand the operation of Queues through a real world application that 
+we use every day without realizing it, now I can say that I understand each of the methods of the implementation 
+of Queues. Also this assignment helped me to practice my knowledge of the use of files as input to read the 
+processes and as output to write the execution order, mainly I was surprised how we create and analyze each of 
+the files within the J unit tests, and also how you can create and remove the files leaving a clean working environment. 
+Finally I was able to acquire some general knowledge about how processors work inside our computers and how behind 
+what looks like a single process running, there are many more interesting things going on in the background.
+
+3. (3 points) In what ways is design an innate talent held by few or a skill that can be learned by many? Answer the above question with respect to THIS SPECIFIC assignment. How does this assignment make you feel about the relationship between talent and skill?
+Software design encompasses both inherent talent and acquired skills. While the ability to devise effective 
+algorithms may be seen as natural, translating these ideas into functional code relies on developed abilities. 
+This assignment, focusing on simulation processor design, demands comprehension of algorithmic principles like queues 
+and time management. While some grasp these ideas swiftly due to talent, optimizing the system for desired outcomes 
+requires learned strategies and diligence. Talent aids in understanding complexity, but mastery and efficiency come 
+from continuous practice and learning.

@@ -1,0 +1,22 @@
+Total: 90/100
+
+10/10%: REFLECTION.txt: thoughtful answers to each question
+15/20%: ArrayQueueTest.java: Thorough testing of your queue implementation
+	-1: Stored in wrong location
+	-1: Need more interesting/larger number of values in queues
+	-2: We did tests similar to testArrayQueue and 
+	    testArrayQueueInt for the ArrayList recently.
+	    Something similar should have been done here.
+	-1: testIsEmpty: we're not sure that a newly constructed queue
+	    will be empty.
+33/35%: Scheduler.java: Correctly functioning scheduler simulation
+	-1: When moving from start to ready after a process runs, use <= instead of <
+	    as you do earlier (or have a shared helper method).
+	-1: The "else" before CPU idle time should be "else if(!startQueue.isEmpty())"
+8/10%: Scheduler.java: Style and comments in your scheduler simulation
+	-1: Very similar code for moving from start to ready is used in two places.
+	    Make a helper method.
+	-1: There is no need to construct a new Process to replace p. Just put p back on.
+24/25%: SchedulerTest.java: Thorough testing of your scheduler simulation
+	-1: All tests use numbers divisible by 5 or 10, so the results
+	    a bit too organized and regimented. Need more chaos.

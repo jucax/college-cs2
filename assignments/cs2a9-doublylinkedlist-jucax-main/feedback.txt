@@ -1,0 +1,12 @@
+Total: 100/100
+
+Late turn-in used
+
+10/10%: REFLECTION.txt: thoughtful answers to each question
+30/30%: DoublyLinkedList.java: Correct functioning of list methods
+	 *: contains: No need to loop from both directions, 
+	    but if you do, then you should stop once you cross the middle
+10/10%: DoublyLinkedList.java: Provide complete big-Oh information for each list method
+30/30%: DoublyLinkedList.java: Correct functioning of methods for iterator class
+20/20%: DoublyLinkedListTest.java: Thoroughness/correctness of required test cases
+	 *: Great tests!

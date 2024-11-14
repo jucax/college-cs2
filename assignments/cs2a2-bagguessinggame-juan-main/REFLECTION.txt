@@ -1,0 +1,28 @@
+1. (3 points) Do you have any remaining questions/concerns about creating and testing new Abstract Data Types after completing this assignment?
+Not really, we feel this assignment has helped enhance our knowledge and skills regarding Abstract Data Types.
+
+2. (3 points) Communication is a very important skill for Computer Scientists to have. Give a brief but clear description in words explaining how you compared the bag of answers with the bag of guesses to determine the number of matches. DO NOT simply describe what the text of your code looks like.
+In order to compare the bag items and guesses, we created two different helper methods. The first method getCorrectGuesses() 
+return the correct number of guesses by iterating through the answers of the user and checking if the bag contains those items,
+we accurately counted matches while carefully accounting for duplicates in order to figure out the total number of correct guesses.
+Then we use the second helper method isItCorrect() that provides feedback and checks if the user guessed all the items comparing 
+the number of correct guesses and the total number of items inside the bag.
+This allows us to have a readable and ordered main method that repeats these two methods until the user guesses all the items 
+and the internal loop is broken. 
+
+3. (2 points) In what SPECIFIC ways does THIS assignment help you move from a novice to an expert designer? How has THIS assignment built upon what was taught in the book and in class?
+Juan - This project let me practice my skills to divide big problems into smaller solutions that can be represented as helper methods,
+Both the book and the assignment have taught me the basics of the interfaces and how important it is in the programming world to be able
+to reuse code previously written by someone else and interpret how it works, as well as to prepare and document our new code to be reused later.
+Elias - This assignment really helped broaden my thinking by making me go even more in depth of building a program and actually
+making the comparisons between bags and creating our own additional tests helped increase/improve my designing skills.
+
+4. (2 points) In what ways is design an innate talent held by few or a skill that can be learned by many? Answer the above question with respect to THIS SPECIFIC assignment. How does this assignment make you feel about the relationship between talent and skill?
+Juan - Now I think that specially in programming is more important the hardwork and the dedication to keep 
+learning new things and get knowledge by ourself like we do reading the Perusall lectures, obviously the talent
+play a big role at the beggining, but If someone wants to become a professional programmer is more importante the
+skills that can be learned.
+Elias - Previously, I was completely set on the fact that skill beats talent. However, after working
+with a partner I realized that two talented people can make things happen quickly and efficiently
+but skill still plays a big part in order to execute the ideas. Hence, both skill and talent go hand
+in hand.

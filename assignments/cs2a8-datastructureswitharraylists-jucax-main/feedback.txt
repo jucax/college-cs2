@@ -1,0 +1,14 @@
+Total: 97/100
+
+10/10%: ArrayListStack.java: Correct implementation
+5/5%: ArrayListStack.java: Provide complete big-Oh information for each method
+10/10%: ArrayListStackTest.java: Correct and thorough tests
+16/16%: ArrayListDeque.java: Correct implementation
+8/8%: ArrayListDeque.java: Provide complete big-Oh information for each method
+12/13%: ArrayListDequeTest.java: Correct and thorough tests
+	-1: Never verifies that a newly constructed deque is empty
+16/16%: ArrayListSet.java: Correct implementation
+6/8%: ArrayListSet.java: Provide complete big-Oh information for each method
+	-1: add: explanation wrong: O(1) happens when contains finds element at index 0 and skips the add. Average case is actually O(n)
+	-1: remove(T): Always O(n), since it has to find the element before removing it
+14/14%: ArrayListSetTest.java: Correct and thorough tests

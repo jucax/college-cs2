@@ -1,0 +1,26 @@
+1. (2 points) How has and does effective and creative design impact society? Consider bioinformatics specifically.
+I personally feel that an effective and creative design in bioinformatics affect a lof of different fields like 
+healthcare improvements, agricultural productivity, and environmental conservation. It also contributes to scientific 
+advancements that impacting society as a whole.
+
+2. (3 points) What are common elements and differences in design thinking between disciplines? Specifically, find an application of the Longest Common Subsequence algorithm outside of bioinformatics, and reflect on how this could influence design. What other types of sequences could you compare?
+Design thinking serves as a universal problem-solving methodology across disciplines.  One notable application of the 
+Longest Common Subsequence algorithm is text comparison for version control systems such as Git, which facilitates 
+change tracking and version history management. LCS integration improves collaboration and decision-making processes 
+by providing information on design evolution and assisting in version management.
+
+3. (2 points) In what SPECIFIC ways does THIS assignment help you move from a novice to an expert designer? How has THIS assignment built upon what was taught in the book and in class?
+It is one of the assignments from which I have learned more because, I understood that to solve a problem that seems 
+simple as the Fibonacci sequence, there are multiple ways to structure a method, I think the most important thing I 
+learned is that the efficiency of the methods is very important, because when the problems become more complex, time 
+is a key element. I learned the memoization technique that I personally did not consider difficult to apply in comparison 
+with the improvement it provides to the speed of execution of the methods, I also learned the LSC algorithm that is useful 
+in many fields of CS.
+
+4. (3 points) In what ways is design an innate talent held by few or a skill that can be learned by many? Answer the above question with respect to THIS SPECIFIC assignment. How does this assignment make you feel about the relationship between talent and skill?
+Once again, I can see reflected the difference between innate talent and skill that can be learned in this task, because 
+for example, I believe that someone with a talent in programming could develop a code that solves fibonacci, but it would 
+probably be very complex and above all inefficient, because it is necessary hard work and practice to know terms like BigOh 
+and strategies like memoization to reduce the execution time of the codes and improve efficiency. It shows once again that 
+in programming, the most important thing is the constant learning and not so much the talent acquired to write a quick solution, 
+but the ability to be constantly improving and updating along with new technologies.

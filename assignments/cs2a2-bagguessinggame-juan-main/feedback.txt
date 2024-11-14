@@ -1,0 +1,29 @@
+Total: 80/100
+
+8/10%: REFLECTION.txt: thoughtful answers to each question
+	-1: Code description claims you carefully account for duplicates,
+	    but does not explain how. As you can see below, you did
+	    not correctly handle duplicates.
+	-1: I appreciate your answers to the talent/skill question,
+	    but I feel as though I could copy/paste them into other
+	    assignments and not be able to notice any issues. 
+	    Basically, it is not clear how these answers are tied
+	    to this specific assignment.
+19/25%: ArrayBagTest.java: quality/correctness of additional tests
+	-1: testAdd: do contains checks after each add call
+	-1: testRemoveT: should remove all items from each bag
+	-1: testGetFrequencyOf: check all items in each bag
+	-1: testGetFrequencyOf: stringBag needs duplicates so that
+	    its results are more interesting
+	-2: testContains: an assertTrue check is needed for every
+	    item in each bag
+29/40%: Guess.java: correctness of guessing game code
+	-10: getCorrectGuesses does not correctly handle duplicates.
+	     The user could guess a value 5 times, and the score would
+	     keep adding up even if the randomBag only contained the
+	     value once.
+	 -1: getCorrectGuesses: should use the positiveInt method
+	     instead of the Scanner's nextInt method in case user
+	     enters bad input.
+24/25%: Guess.java: quality of comments and style/organization
+	-1: Code in body of getCorrectGuesses could use more explanation.

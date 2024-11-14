@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Scheduler",
+      "setup": "rm src/test/java/scheduler/SchedulerTest.java; unzip -P GE3sa430z .test/.S.zip -d src/test/java/scheduler ; rm src/test/java/scheduler/SchedulerTest.java",
+      "run": "gradle test",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 35
+    }
+  ]
+}

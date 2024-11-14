@@ -1,0 +1,26 @@
+plugins {
+    id  'java'
+}
+ 
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.8.2')
+}
+ 
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'list.DoublyLinkedList'
+    }
+    archiveFileName="CS2A9-DoublyLinkedList.jar"
+}

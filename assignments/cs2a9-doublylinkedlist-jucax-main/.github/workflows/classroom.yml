@@ -1,0 +1,32 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: DoublyLinkedList
+      id: doublylinkedlist
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: DoublyLinkedList
+        setup-command: rm src/test/java/list/DoublyLinkedListTest.java ; unzip -P
+          GE3sa430z .test/.DLL.zip -d src/test/java/list
+        command: gradle test
+        timeout: 10
+        max-score: 60
+    - name: Autograding Reporter
+      uses: education/autograding-grading-reporter@v1
+      env:
+        DOUBLYLINKEDLIST_RESULTS: "${{steps.doublylinkedlist.outputs.result}}"
+      with:
+        runners: doublylinkedlist

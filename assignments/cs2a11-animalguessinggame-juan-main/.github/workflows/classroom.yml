@@ -1,0 +1,32 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Guessing Game
+      id: guessing-game
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Guessing Game
+        setup-command: rm src/test/java/game/GuessingGameTest.java ; unzip -P GE3sa430z
+          .test/.GG.zip -d src/test/java/game
+        command: gradle test
+        timeout: 10
+        max-score: 55
+    - name: Autograding Reporter
+      uses: education/autograding-grading-reporter@v1
+      env:
+        GUESSING-GAME_RESULTS: "${{steps.guessing-game.outputs.result}}"
+      with:
+        runners: guessing-game

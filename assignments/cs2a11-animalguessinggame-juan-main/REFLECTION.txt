@@ -1,0 +1,16 @@
+1. (3 points) In what SPECIFIC ways does THIS assignment help you move from a novice to an expert designer? How has THIS assignment built upon what was taught in the book and in class?
+This assignment was simple aside from the Learn method. There wasn't anything new aside from the saving of the text file.
+That was interesting to see. We implemented some things we learned from our Perusall readings as well as running on the code provided by Dr. Schrum during class.
+We were also shown how to see the Left/Right branches via diagrams and used that logic to put into code.
+
+
+2. (4 points) Communication is a very important skill for Computer Scientists to have. Give a brief but clear description in words explaining how you load a previously saved decision tree in order to regain the knowledge from a previous session. DO NOT simply describe what the text of your code looks like.
+We used the loadTree method for this task. We have a saveTree method where we aimed to save the data. Using this we would need the loadTree method to take the file and read it using Scanner.
+In this process we use recursion to rebuild the tree based on the preexisting data from the file. We do this using pre-order which helps make sure everything is reconstructed correctly.
+
+
+3. (3 points) In what ways is design an innate talent held by few or a skill that can be learned by many? Answer the above question with respect to THIS SPECIFIC assignment. How does this assignment make you feel about the relationship between talent and skill?
+This assignment made us believe that skill was in need. We were shown by hand how to read the trees and how the calculations of the Left and Right children worked/looked like.
+This assignment did not change my belief that talent and skill are both needed to complete a challenging project, but we do believe that you could have done this assignment through the sole use of skill.
+
+

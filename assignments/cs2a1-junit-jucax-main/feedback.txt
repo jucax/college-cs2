@@ -1,0 +1,11 @@
+Total: 95/100
+
+10/10%: REFLECTION.txt: thoughtful answers to each question
+24/24%: SimpleStaticMethods.java: correctly functioning code
+	 *: product: array.length check not needed
+18/18%: ScannerMethods.java: correctly functioning code
+22/24%: SimpleStaticMethodsTest.java: adequate, correct, and thorough tests
+	-1: testProduct: need test with empty input array
+	-1: testAverages: your result arrays all have the same length of 2
+21/24%: ScannerMethodsTest.java: adequate, correct, and thorough tests
+	-3: setUpBeforeClass: supposed to add 10 lines

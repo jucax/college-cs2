@@ -1,0 +1,16 @@
+Total: 95/100
+
+10/10%: REFLECTION.txt: thoughtful answers to each question
+14/15%: LinkedStackTest.java: quality/correctness of tests
+	-1: Each stack should not be set up with the same number of elements
+	 *: All exception checks in testPeek should use peek instead of pop
+8/10%: LispEvaluateTest.java: quality/correctness of tests
+	-1: Non-zero epsilon needed
+	    assertEquals(13.2, LispEvaluate.lispCalculate("(/ (+ (* 12 3) (- 45 15)) (- (* 4 2) 3))"), 0);
+	    assertEquals(5, LispEvaluate.lispCalculate("(+ (* 2.2 (- 5 (/ 10 2))) (/ (- 20 5) 3))"), 0);
+	-1: Need more floating point values in the expressions (doubles)
+35/35%: LispEvaluate.java: correctness of code
+28/30%: LispEvaluate.java: quality of comments and style/organization
+	-1: Include clarification about removing opening
+	    parentheses/NaN for each operator case
+	-1: Explain why operands are reversed for subtraction/division cases

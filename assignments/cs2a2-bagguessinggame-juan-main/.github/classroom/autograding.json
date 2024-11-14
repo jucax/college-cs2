@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Guessing Game",
+      "setup": "mkdir src/test/java/game; unzip -o -P SDF3ds3s1x .test/.G.zip -d src/test/java/game ",
+      "run": "gradle test --tests 'game.*'",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 40
+    }
+  ]
+}

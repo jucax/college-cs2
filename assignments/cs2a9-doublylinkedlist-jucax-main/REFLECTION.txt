@@ -1,0 +1,26 @@
+1. (4 points) Communication is a very important skill for Computer Scientists to have. Give a brief but clear description in words explaining the different cases for the add(int newPosition, T newEntry) method, which adds elements at arbitrary indices in the list. DO NOT simply describe what the text of your code looks like.
+The add(int newPosition, T newEntry) function inserts a new element at a specified position within a doubly linked list. 
+It covers three different scenarios: the first, add the new entry to the end of the list if the designated position matches 
+the current number of entries, in this case we call the add(T newEntry) method which directly inserts at the end of the list 
+and checks whether it is the first entity to be added or not, ; second, insert the new entry at the beginning of the list, 
+thus reassigning the pointers so that the new node is the first node; and finally, for all other positions, insert the new 
+entry at the specified index in the middle of the list, get the previous node and the next node and adjust the pointers to 
+seamlessly integrate the new node between the previous and next node to the desired position. This method deals with all scenarios 
+and maintains the integrity of the relationships between the nodes.
+
+2. (3 points) In what SPECIFIC ways does THIS assignment help you move from a novice to an expert designer? How has THIS assignment built upon what was taught in the book and in class?
+This assignment was an important part of my transition from novice to expert designer, giving me more hands-on experience in 
+implementing more advanced data structures, starting from something basic like the list, but making modifications that make 
+the structure more flexible and even efficient in some cases. Based solely on past labs and the book, I was able to properly 
+implement a doubly linked list and it's iterator methods. With this assignment, I improve my understanding of these fundamental 
+concepts, my coding and development skills, and help my skills to implement with efficiency in mind along with functionality.
+
+
+3. (3 points) In what ways is design an innate talent held by few or a skill that can be learned by many? Answer the above question with respect to THIS SPECIFIC assignment. How does this assignment make you feel about the relationship between talent and skill?
+Design, especially in software development, is primarily a skill that can be learned by many, rather than an innate talent 
+possessed by a few. This assignment underscores the idea that mastery of design comes from understanding concepts, rather than 
+relying solely on innate talent, as I managed to implement a new structure based solely on the knowledge I had gained and 
+reinforced by implementing other simpler ADTs, and once practiced and understood, more variables or references can be added as 
+in this case, which slightly modify and customize the methods and adapt the ADT to our needs. Through practice, education and 
+dedication, people can develop their design skills and become competent designers, regardless of any perceived innate talent.
+ 

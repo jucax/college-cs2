@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "DNA, RNA, Fast DNA, Fast RNA",
+      "setup": "rm src/test/java/bio/BioinformaticsTest.java; unzip -P GE3sa430z .test/.B.zip -d src/test/java/bio ; rm src/test/java/bio/BioinformaticsTest.java",
+      "run": "gradle clean test",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 60
+    }
+  ]
+}

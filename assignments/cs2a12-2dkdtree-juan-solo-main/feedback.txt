@@ -1,0 +1,13 @@
+Total: 96/100
+
+10/10%: REFLECTION.txt: thoughtful answers to each question
+37/40%: TwoDimensionTree.java: Correct functioning code
+	-1: findEntry overly elaborate and incorrect. Just set result = rootEntry
+		when both coordinates are equal
+	-1: containsEntry needs an equals check
+	-1: Iterator should throw NoSuchElementException
+14/15%: TwoDimensionTree.java: Good comments, style, and efficiency
+	-1: You should be using a helper method to compare points, since this
+		comparison is needed in at least two places. This was the point
+		of the compareLocations method from the lab day.
+35/35%: TwoDimensionTreeTest.java: Correct/thorough tests

@@ -1,0 +1,13 @@
+Total: 97/100
+
+10/10%: REFLECTION.txt: thoughtful answers to each question
+20/20%: Bioinformatics.java: for functionality of slow DNA method
+19/20%: Bioinformatics.java: for functionality of slow RNA method
+	-1: Only loop for k < j-1
+10/10%: Bioinformatics.java: for functionality of fast DNA method
+9/10%: Bioinformatics.java: for functionality of fast RNA method
+	-1: Only loop for k < j-1
+15/16%: Bioinformatics.java: for comments in Bioinformatics.java
+	-1: DNA: @param of i and j needs to be better
+8/8%: BioinformaticsTest.java: for testing both DNA scoring methods
+6/6%: BioinformaticsTest.java: for testing both RNA scoring methods

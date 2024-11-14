@@ -1,0 +1,26 @@
+plugins {
+    id  'java'
+}
+ 
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.8.2')
+}
+ 
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'scheduler.Scheduler'
+    }
+    archiveFileName="CS2A7-QueueProcessScheduling.jar"
+}

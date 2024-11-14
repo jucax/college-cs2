@@ -1,0 +1,8 @@
+Total: 100/100
+
+10/10%: REFLECTION.txt: thoughtful answers to each question.
+	*: three quadrants is actually the slowest. The other two are tied, and are faster.
+25/25%: Sorted2DArraySearch.java: Correct implementation of three quadrant search.
+25/25%: Sorted2DArraySearch.java: Correct implementation of zig-zag search.
+25/25%: Sorted2DArraySearch.java: Correct implementation of diagonal binary search.
+15/15%: Sorted2DArraySearch.java: Quality of comments and style across all code.
