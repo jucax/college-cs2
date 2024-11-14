@@ -1,0 +1,109 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Day 1
+      id: day-1
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Day 1
+        setup-command: ''
+        command: gradle test --tests 'client.*'
+        timeout: 10
+        max-score: 1
+    - name: Day 2
+      id: day-2
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Day 2
+        setup-command: unzip -o -P GE3sa430z .test/.G.zip -d src/test/java/lists;
+          rm src/test/java/lists/GradeExtendedListsTest.java; rm src/test/java/lists/GradeLinkedListTest.java;
+          rm src/test/java/lists/GradeListIteratorTest.java; rm src/test/java/lists/GradeSortedArrayListTest.java;
+          rm src/test/java/lists/GradeSortedLinkedListTest.java
+        command: gradle test --tests 'lists.GradeArrayListTest'
+        timeout: 10
+        max-score: 1
+    - name: Day 3
+      id: day-3
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Day 3
+        setup-command: unzip -o -P GE3sa430z .test/.G.zip -d src/test/java/lists;
+          rm src/test/java/lists/GradeExtendedListsTest.java; rm src/test/java/lists/GradeArrayListTest.java;
+          rm src/test/java/lists/GradeListIteratorTest.java; rm src/test/java/lists/GradeSortedArrayListTest.java;
+          rm src/test/java/lists/GradeSortedLinkedListTest.java
+        command: gradle test --tests 'lists.GradeLinkedListTest'
+        timeout: 10
+        max-score: 1
+    - name: Day 4
+      id: day-4
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Day 4
+        setup-command: unzip -o -P GE3sa430z .test/.G.zip -d src/test/java/lists;
+          rm src/test/java/lists/GradeExtendedListsTest.java; rm src/test/java/lists/GradeArrayListTest.java;
+          rm src/test/java/lists/GradeLinkedListTest.java; rm src/test/java/lists/GradeSortedArrayListTest.java;
+          rm src/test/java/lists/GradeSortedLinkedListTest.java
+        command: gradle test --tests 'lists.GradeListIteratorTest'
+        timeout: 10
+        max-score: 1
+    - name: Day 5
+      id: day-5
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Day 5
+        setup-command: unzip -o -P GE3sa430z .test/.G.zip -d src/test/java/lists;
+          rm src/test/java/lists/GradeExtendedListsTest.java; rm src/test/java/lists/GradeArrayListTest.java;
+          rm src/test/java/lists/GradeLinkedListTest.java; rm src/test/java/lists/GradeSortedArrayListTest.java;
+          rm src/test/java/lists/GradeListIteratorTest.java
+        command: gradle test --tests 'lists.GradeSortedLinkedListTest'
+        timeout: 10
+        max-score: 1
+    - name: Day 6
+      id: day-6
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Day 6
+        setup-command: unzip -o -P GE3sa430z .test/.G.zip -d src/test/java/lists;
+          rm src/test/java/lists/GradeSortedLinkedListTest.java; rm src/test/java/lists/GradeArrayListTest.java;
+          rm src/test/java/lists/GradeLinkedListTest.java; rm src/test/java/lists/GradeSortedArrayListTest.java;
+          rm src/test/java/lists/GradeListIteratorTest.java
+        command: gradle test --tests 'lists.GradeExtendedListsTest'
+        timeout: 10
+        max-score: 1
+    - name: Day 7
+      id: day-7
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Day 7
+        setup-command: unzip -o -P GE3sa430z .test/.G.zip -d src/test/java/lists;
+          rm src/test/java/lists/GradeSortedLinkedListTest.java; rm src/test/java/lists/GradeArrayListTest.java;
+          rm src/test/java/lists/GradeLinkedListTest.java; rm src/test/java/lists/GradeExtendedListsTest.java;
+          rm src/test/java/lists/GradeListIteratorTest.java
+        command: gradle test --tests 'lists.GradeSortedArrayListTest'
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: education/autograding-grading-reporter@v1
+      env:
+        DAY-1_RESULTS: "${{steps.day-1.outputs.result}}"
+        DAY-2_RESULTS: "${{steps.day-2.outputs.result}}"
+        DAY-3_RESULTS: "${{steps.day-3.outputs.result}}"
+        DAY-4_RESULTS: "${{steps.day-4.outputs.result}}"
+        DAY-5_RESULTS: "${{steps.day-5.outputs.result}}"
+        DAY-6_RESULTS: "${{steps.day-6.outputs.result}}"
+        DAY-7_RESULTS: "${{steps.day-7.outputs.result}}"
+      with:
+        runners: day-1,day-2,day-3,day-4,day-5,day-6,day-7

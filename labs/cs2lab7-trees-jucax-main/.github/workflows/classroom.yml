@@ -1,0 +1,41 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Day 1
+      id: day-1
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Day 1
+        setup-command: ''
+        command: gradle test --tests 'tree.BinaryTreeTest'
+        timeout: 10
+        max-score: 1
+    - name: Day 2
+      id: day-2
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Day 2
+        setup-command: ''
+        command: gradle test --tests 'tree.BinarySearchTreeTest'
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: education/autograding-grading-reporter@v1
+      env:
+        DAY-1_RESULTS: "${{steps.day-1.outputs.result}}"
+        DAY-2_RESULTS: "${{steps.day-2.outputs.result}}"
+      with:
+        runners: day-1,day-2

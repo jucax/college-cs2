@@ -1,0 +1,20 @@
+plugins {
+    id  'java'
+}
+ 
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.8.2')
+    implementation files('queue.jar')
+}
+ 
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Day 1",
+      "setup": "",
+      "run": "gradle test --tests 'client.*'",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Day 2",
+      "setup": "unzip -P GE3sa430z .test/.G.zip -d src/test/java/queues ",
+      "run": "gradle test --tests 'queues.GradeArrayQueueTest'",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Day 3",
+      "setup": "unzip -P GE3sa430z .test/.G.zip -d src/test/java/queues ",
+      "run": "gradle test --tests 'queues.GradeLinkedDequeTest'",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
